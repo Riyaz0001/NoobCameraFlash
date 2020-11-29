@@ -11,6 +11,7 @@ import com.noob.noobcameraflash.Utilities.CameraFlashUtility;
 import com.noob.noobcameraflash.Utilities.CameraUtilICS;
 import com.noob.noobcameraflash.Utilities.CameraUtilLollipop;
 import com.noob.noobcameraflash.Utilities.CameraUtilMarshMallow;
+import android.widget.Toast;
 
 /**
  * Created by abhi on 23/10/16.
@@ -57,10 +58,14 @@ public class NoobCameraManager {
 
     public void turnOnFlash() throws CameraAccessException {
         mCameraUtil.turnOnFlash();
+        // added this line
+        Toast.makeText(this, "LED Flash is ON", Toast.LENGTH_LONG).show();
     }
 
     public void turnOffFlash() throws CameraAccessException {
         mCameraUtil.turnOffFlash();
+        // added this line
+        Toast.makeText(this, "LED Flash is OFF", Toast.LENGTH_LONG).show();
     }
 
     public void toggleFlash() throws CameraAccessException {
